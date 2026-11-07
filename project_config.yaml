@@ -1,0 +1,53 @@
+annotation:
+  auto_save: true
+  default_class: poop
+  validation_on_save: true
+dataset:
+  class_colors:
+    leaf: green
+    poop: red
+    stick: brown
+  classes:
+  - leaf
+  - poop
+  - stick
+  name: poop_detection_dataset
+directories:
+  base: poop_detection_dataset
+  images: images
+  labels: labels
+  test: test
+  train: train
+  val: val
+  yolo_labels: yolo_labels
+extraction:
+  output_format: jpg
+  preview_samples: 6
+  quality: 95
+  target_frames_per_video: 15
+patterns:
+  image_extensions:
+  - .jpg
+  - .jpeg
+  - .png
+  timestamp_format: '%Y%m%d_%H%M%S'
+  video_extensions:
+  - .mp4
+  - .avi
+  - .mov
+  - .mkv
+project:
+  created: '2025-10-19T10:55:44.306711'
+  description: Multi-class dog poop detection system
+  name: poop_detection
+  version: 1.0.0
+splitting:
+  random_seed: 42
+  stratified: false
+  test_ratio: 0.0
+  train_ratio: 0.8
+  val_ratio: 0.2
+yolo:
+  coordinate_format: normalized
+  format_version: '8'
+  min_annotation_rate: 0.2

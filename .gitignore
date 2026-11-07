@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Model weights (base models are downloadable; trained weights ship via GitHub release)
+*.pt
+*.onnx
+*.tflite
+*.mlmodel
+
+# Dataset and media (large, mostly private, dataset is frozen)
+poop_detection_dataset/
+poop_detection_dataset_backup/
+raw_media/
+validation_photos/
+poop_detection_results/
+
+# Training outputs
+runs/
+
+# Runtime state / caches
+*.cache
+.annotation_status.json
+.extraction_log.json
+.training_history.json
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
