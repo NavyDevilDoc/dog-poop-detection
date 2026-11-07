@@ -1,0 +1,9 @@
+[project]
+name = "poop-detection"
+version = "0.1.0"
+description = "Multi-class YOLO dog poop detection"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
