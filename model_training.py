@@ -1,7 +1,7 @@
 from pathlib import Path
 import yaml
 from ultralytics import YOLO
-from config import config, get_project_title
+from config import load_config, project_title
 
 
 def validate_dataset_config(data_yaml_path):
@@ -295,11 +295,11 @@ def get_recommended_training_params(num_images):
         }
 
 if __name__ == "__main__":
-    print(get_project_title('training'))
+    cfg = load_config()
+    print(project_title(cfg, 'training'))
     print("=" * 50)
-    
-    # Configuration
-    DATASET_DIR = config.get('dataset.name', 'poop_detection_dataset')
+
+    DATASET_DIR = cfg.dataset.name
     DATA_YAML = f"{DATASET_DIR}/data.yaml"
     
     # Step 2: Validate dataset
